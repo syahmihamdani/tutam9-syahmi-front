@@ -21,7 +21,7 @@ const YourQuizzesPage = () => {
 
     const fetchQuizzes = async (username) => {
         try {
-            const res = await axios.get("https://https://tutam9-syahmi-back.vercel.app/quiz");
+            const res = await axios.get("https://tutam9-syahmi-back.vercel.app/quiz");
             const userQuizzes = res.data.filter(
                 (quiz) => quiz.createdBy === username
             );
