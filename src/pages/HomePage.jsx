@@ -19,7 +19,7 @@ const HomePage = () => {
 
       // Fetch quizzes from backend using Axios
       axios
-        .get("http://localhost:3000/quiz")
+        .get("https://tutam9-syahmi-front.vercel.app/quiz")
         .then((response) => {
           setQuizzes(response.data);
         })

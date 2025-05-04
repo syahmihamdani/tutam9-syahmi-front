@@ -53,7 +53,7 @@ const AddQuizPage = () => {
         e.preventDefault();
         const createdBy = localStorage.getItem("quizzard_user");
 
-        const res = await axios.post("http://localhost:3000/quiz", {
+        const res = await axios.post("https://tutam9-syahmi-front.vercel.app/quiz", {
             ...quiz,
             createdBy,
         });
