@@ -33,7 +33,7 @@ const Sidebar = () => {
                 >
                     🛑 Log Out
                 </li>
-            </ul>
+            </ul>   
         </div>
     );
 };

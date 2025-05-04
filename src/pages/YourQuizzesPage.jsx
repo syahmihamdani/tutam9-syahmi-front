@@ -21,7 +21,7 @@ const YourQuizzesPage = () => {
 
     const fetchQuizzes = async (username) => {
         try {
-            const res = await axios.get("https://https://tutam9-syahmi-front.vercel.app/quiz");
+            const res = await axios.get("https://https://tutam9-syahmi-back.vercel.app/quiz");
             const userQuizzes = res.data.filter(
                 (quiz) => quiz.createdBy === username
             );
@@ -33,7 +33,7 @@ const YourQuizzesPage = () => {
 
     const handleDelete = async (id) => {
         try {
-            await axios.delete(`https://tutam9-syahmi-front.vercel.app/quiz/${id}`);
+            await axios.delete(`https://tutam9-syahmi-back.vercel.app/quiz/${id}`);
             setQuizzes(quizzes.filter((q) => q._id !== id));
         } catch (err) {
             console.error("Error deleting quiz", err);

@@ -17,15 +17,14 @@ const HomePage = () => {
     } else {
       setName(savedName);
 
-      // Fetch quizzes from backend using Axios
       axios
-        .get("https://tutam9-syahmi-front.vercel.app/quiz")
+        .get("https://tutam9-syahmi-back.vercel.app/quiz")
         .then((response) => {
           setQuizzes(response.data);
         })
         .catch((error) => {
           console.error("Error fetching quizzes:", error);
-          setQuizzes([]); // You can handle error state here as needed
+          setQuizzes([]); 
         });
     }
   }, [navigate]);
